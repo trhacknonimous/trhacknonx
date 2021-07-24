@@ -1,12 +1,14 @@
-package sample.evolve;
+package sample.vector;
 
-/**
- * This is a sample class used by Transformer.
- */
-public class Sample {
-    public static Class _version;
-
-    public static Object make(Object[] args) {
-	return VersionManager.make(_version, args);
+public class Sample extends java.util.Vector {
+    public void add(X e) {
+	super.addElement(e);
     }
+
+    public X at(int i) {
+	return (X)super.elementAt(i);
+    }
+}
+
+class X {
 }
